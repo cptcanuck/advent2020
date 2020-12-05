@@ -45,7 +45,7 @@ my_x = 0
 my_y = 0
 
 for i in range(0,height):
-    line = lines[i]
+    line =lines[i]
     #print("####loc: ",my_y,my_x,len(line))
     if my_x > len(line):
         print("whatthefuck")
@@ -59,8 +59,8 @@ for i in range(0,height):
         miss += 1
     my_y += 1
     my_x += 3
-    print(" ")
-    print("pm loc: ",my_y,my_x,len(line))
+    #print(" ")
+    #print("pm loc: ",my_y,my_x,len(line))
     #for this test data, line length is 32, array is 0-31
     #ex1: my_x was 27, moved 3 right, now 30 - OK
     #ex2: my_x was 29, moved 3 right, now 32 - LOOP around to 0
@@ -71,6 +71,11 @@ for i in range(0,height):
         my_x = my_x - len(line)
         looped += 1
 
+    print('len = {}, x = {}'.format(len(line), my_x))
+
 print("Trees:   %s" % hit)
 print("Misses:  %s" % miss)
 print("Loops:   %s" % looped)
+
+
+
